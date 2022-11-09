@@ -32,7 +32,6 @@ def make(targets):
     command = ['make', '-j'] + targets
     return new_process.execute(command, cwd=utils.ROOT_DIR)
 
-
 def build_base_images() -> Tuple[int, str]:
     """Build base images locally."""
     return make(['base-image', 'worker'])

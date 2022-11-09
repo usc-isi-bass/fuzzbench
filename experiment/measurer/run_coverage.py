@@ -32,10 +32,10 @@ EXIT_BUFFER = 15
 RSS_LIMIT_MB = 2048
 
 # Per-unit processing timeout for libfuzzer merge.
-UNIT_TIMEOUT = 10
+UNIT_TIMEOUT = 0.2
 
 # Max time to spend on libfuzzer merge.
-MAX_TOTAL_TIME = experiment_utils.get_snapshot_seconds()
+MAX_TOTAL_TIME = 90
 
 
 def find_crashing_units(artifacts_dir: str) -> List[str]:

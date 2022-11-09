@@ -21,7 +21,7 @@ from fuzzers import utils
 def build():
     """Build benchmark."""
     cflags = [
-        '-fprofile-instr-generate', '-fcoverage-mapping', '-gline-tables-only'
+        '-fprofile-instr-generate', '-fcoverage-mapping', '-gline-tables-only', '-DFRCOV'
     ]
     utils.append_flags('CFLAGS', cflags)
     utils.append_flags('CXXFLAGS', cflags)
@@ -29,5 +29,6 @@ def build():
     os.environ['CC'] = 'clang'
     os.environ['CXX'] = 'clang++'
     os.environ['FUZZER_LIB'] = '/usr/lib/libFuzzer.a'
+    os.environ['FR_COV_BUILD'] = '1'
 
     utils.build_benchmark()
