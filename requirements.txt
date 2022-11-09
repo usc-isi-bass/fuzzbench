@@ -1,3 +1,4 @@
+markupsafe==2.0.1
 alembic==1.4.0
 google-api-python-client==2.5.0
 google-auth==1.30.1
