@@ -1,5 +1,12 @@
 # FuzzBench: Fuzzer Benchmarking As a Service
 
+## Common Issues
+- Requires Docker >= 20.
+- The minimum fuzzing time is 1000 in order to merge data successfully.   
+[https://github.com/google/fuzzbench/issues/777](https://github.com/google/fuzzbench/issues/777).
+- Patch protobuf issue in docker.   
+[https://github.com/google/fuzzbench/pull/1407/files](https://github.com/google/fuzzbench/pull/1407/files).
+
 FuzzBench is a free service that evaluates fuzzers on a wide variety of
 real-world benchmarks, at Google scale. The goal of FuzzBench is to make it
 painless to rigorously evaluate fuzzing research and make fuzzing research
