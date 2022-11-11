@@ -122,6 +122,7 @@ docker run \\
 -e REPORT_FILESTORE=gs://web-reports \\
 -e FUZZ_TARGET={oss_fuzz_target} \\
 -e LOCAL_EXPERIMENT=False \\
+-e PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \\
 --name=runner-container \\
 --cap-add SYS_NICE --cap-add SYS_PTRACE \\
 {docker_image_url} 2>&1 | tee /tmp/runner-log.txt'''
@@ -163,6 +164,7 @@ docker run \\
 -e EXPERIMENT_FILESTORE=/tmp/experiment-data -v /tmp/experiment-data:/tmp/experiment-data \\
 -e REPORT_FILESTORE=/tmp/web-reports -v /tmp/web-reports:/tmp/web-reports \\
 -e FUZZ_TARGET={oss_fuzz_target} \\
+-e PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \\
 -e LOCAL_EXPERIMENT=True \\
 \\
 --cap-add SYS_NICE --cap-add SYS_PTRACE \\
