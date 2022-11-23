@@ -10,41 +10,54 @@
 ## Benchmarks
 ### Type bug
 ```
-arrow_parquet-arrow-fuzz
+arrow_parquet-arrow-fuzz                                 cpp
 aspell_aspell_fuzzer
-binutils-fuzz_cxxfilt
-binutils-fuzz_disassemble
-curl
-ffmpeg_ffmpeg_demuxer_fuzzer
+binutils-fuzz_cxxfilt                              R
+binutils-fuzz_disassemble                          R
+curl                                               R     cpp
+ffmpeg_ffmpeg_demuxer_fuzzer                       NS    cpp
 file_magic_fuzzer
-grok_grk_decompress_fuzzer
-lcms
-libarchive_libarchive_fuzzer
-libgit2_objects_fuzzer
-libhevc_hevc_dec_fuzzer
+grok_grk_decompress_fuzzer                               cpp
+lcms                                               R
+libarchive_libarchive_fuzzer                       NS
+libgit2_objects_fuzzer                             NS    cpp
+libhevc_hevc_dec_fuzzer                                  cpp
 libhtp_fuzz_htp
-libpcap
+libpcap                                            R     cpp
 libxml2_libxml2_xml_reader_for_file_fuzzer
-libxml2_reader
-libxml2_xml
+libxml2_reader                                     R     cpp
+libxml2_xml                                        R     cpp
 matio_matio_fuzzer
-muparser_set_eval_fuzzer
+muparser_set_eval_fuzzer                                 cpp
 ndpi_fuzz_ndpi_reader
-njs_njs_process_script_fuzzer
+njs_njs_process_script_fuzzer                      NS
 openh264_decoder_fuzzer
-php_php-fuzz-execute
-php_php-fuzz-parser-2020-07-25
-poppler_pdf_fuzzer
-proj4
+php_php-fuzz-execute                               NS
+php_php-fuzz-parser-2020-07-25                     NS
+poppler_pdf_fuzzer                                       cpp
+proj4                                              R
 proj4_standard_fuzzer
 stb_stbi_read_fuzzer
 systemd_fuzz-varlink
 tpm2_tpm2_execute_command_fuzzer
-usrsctp
-usrsctp_fuzzer_connect
-wireshark_fuzzshark_ip
-zstd
+usrsctp                                            R     cpp
+usrsctp_fuzzer_connect                                   cpp
+wireshark_fuzzshark_ip                                   cpp
+zstd                                               R
 zstd_stream_decompress
+```
+
+### No SYMCC
+```
+ffmpeg_ffmpeg_demuxer_fuzzer
+lcms-2017-03-21
+libpcap_fuzz_both
+ndpi_fuzz_ndpi_reader
+njs_njs_process_script_fuzzer
+php_php-fuzz-execute
+php_php-fuzz-parser
+php_php-fuzz-parser-2020-07-25
+sqlite3_ossfuzz
 ```
 
 ### RevBugBench
