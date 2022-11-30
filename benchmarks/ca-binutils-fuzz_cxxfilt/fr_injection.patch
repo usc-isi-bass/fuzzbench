@@ -300,6 +300,18 @@ new mode 100755
 diff --git a/binutils/objdump.c b/binutils/objdump.c
 old mode 100644
 new mode 100755
+index 39b5793bc2e..a8d41ca2a54
+--- a/binutils/objdump.c
++++ b/binutils/objdump.c
+@@ -198,7 +198,7 @@ static bfd_size_type stabstr_size;
+ /* Handlers for -P/--private.  */
+ static const struct objdump_private_desc * const objdump_private_vectors[] =
+   {
+-    OBJDUMP_PRIVATE_VECTORS
++    &objdump_private_desc_xcoff,
+     NULL
+   };
+ 
 diff --git a/binutils/objdump.h b/binutils/objdump.h
 old mode 100644
 new mode 100755
