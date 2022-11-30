@@ -12,14 +12,14 @@
 ```
 arrow_parquet-arrow-fuzz                                 cpp
 aspell_aspell_fuzzer
-binutils-fuzz_cxxfilt                              R
-binutils-fuzz_disassemble                          R
+binutils-fuzz_cxxfilt                              R            CA
+binutils-fuzz_disassemble                          R            _
 curl                                               R     cpp
 ffmpeg_ffmpeg_demuxer_fuzzer                       NS    cpp
 file_magic_fuzzer
 grok_grk_decompress_fuzzer                               cpp
-lcms                                               R
-libarchive_libarchive_fuzzer                       NS
+lcms                                               R            CA
+libarchive_libarchive_fuzzer                       NS           CA
 libgit2_objects_fuzzer                             NS    cpp
 libhevc_hevc_dec_fuzzer                                  cpp
 libhtp_fuzz_htp
@@ -35,7 +35,7 @@ openh264_decoder_fuzzer
 php_php-fuzz-execute                               NS
 php_php-fuzz-parser-2020-07-25                     NS
 poppler_pdf_fuzzer                                       cpp
-proj4                                              R
+proj4                                              R            CA
 proj4_standard_fuzzer
 stb_stbi_read_fuzzer
 systemd_fuzz-varlink
@@ -43,7 +43,7 @@ tpm2_tpm2_execute_command_fuzzer
 usrsctp                                            R     cpp
 usrsctp_fuzzer_connect                                   cpp
 wireshark_fuzzshark_ip                                   cpp
-zstd                                               R
+zstd                                               R            CA
 zstd_stream_decompress
 ```
 
