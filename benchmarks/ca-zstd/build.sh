@@ -15,15 +15,15 @@
 #
 ################################################################################
 
-pushd /src/Cannotate
-./fuzzbench-install.sh
-popd
-
 git apply ../fr_injection.patch
 
 cd tests/fuzz
 
 if [ -z $FR_COV_BUILD ]; then
+	pushd /src/Cannotate
+	./fuzzbench-install.sh
+	popd
+
 	export ORIG_CC=$CC
 	export CC=cannotate-cc
 	export ADDITIONAL_FLAGS="-I/src/Cannotate/clang+llvm-13/lib/clang/13.0.0/include"

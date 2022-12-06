@@ -23,6 +23,8 @@ if [ -z $FR_COV_BUILD ]; then
 	export ORIG_CC=$CC
 	export CC=cannotate-cc
 	export ADDITIONAL_FLAGS="-I/src/Cannotate/clang+llvm-13/lib/clang/13.0.0/include"
+	export SKIPLIST="archive_read_support_filter_program.c archive_read_support_format_tar.c archive_read_support_filter_program.c archive_read_support_filter_program.c archive_util.c cpio.c"
+	export SKIPFUNCS="readpassphrase main"
 fi
 
 # build the project
